@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Me
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div class="head">
+    <div *ngIf="!userMode">
+      <div class="img">
+        <img src="assets/image/user.jpg">
+      </div>
+
+      <div class="sign">
+        <a (click)="login()">
+          <h2>LOGIN_REGISTER</h2>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="userMode">
+      <div class="img">
+        <img src="{{userMode.PhotoUrl}}">
+      </div>
+      <div class="sign">
+          <h2>{{userMode.Credentials}}</h2>
+      </div>
+    </div>
+  </div>
+  <ion-row>
+    <ion-col>
+      <a>
+        <img src="assets/image/i05.png"/>
+      </a>
+      Share1
+    </ion-col>
+    <ion-col>
+      <a>
+        <img src="assets/image/i05.png"/>
+      </a>
+      Share2
+    </ion-col>
+    <ion-col>
+      <a>
+        <img src="assets/image/i05.png"/>
+      </a>
+      Share3
+    </ion-col>
+    <ion-col>
+      <a>
+        <img src="assets/image/i05.png"/>
+      </a>
+      Share4
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <audio-track #audio *ngFor="let track of myTracks" [track]="track" (onFinish)="onTrackFinished($event)">
+      <ion-item>
+          <audio-track-play dark [audioTrack]="audio">P</audio-track-play>
+      </ion-item>
+    </audio-track>
+  </ion-list>
+
+  <div class="logOut" *ngIf="userMode">
+    <button ion-button round block (click)="logout()">Logout</button>
+  </div>
+</ion-content>

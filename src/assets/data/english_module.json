@@ -1,0 +1,35 @@
+{
+    "modules":
+      [
+        {
+            "title":"单词自动播放",
+            "page":"WordIteratePage",
+            "icon":"beer"
+        },
+        {
+            "title" : "单词深入学习",
+            "page" : "WordStudyPage",
+            "icon":"flask"
+        },
+        {
+            "title" : "句子常用",
+            "page" : "SentencePage" ,
+            "icon":"football"
+        },
+        {
+            "title" : "饼状图",
+            "page" : "WordPieChartPage" ,
+            "icon":"football"
+        },
+        {
+            "title" : "折线图",
+            "page" : "WordLineChartPage" ,
+            "icon":"football"
+        },
+        {
+            "title" : "柱状图",
+            "page" : "WordBarChartPage" ,
+            "icon":"football"
+        }
+      ]
+}

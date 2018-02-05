@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>{{category}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content *ngIf="hasErr">
+    <div class="loading" (click)="getData(null)">
+        <img src="assets/image/404.png" style="width:50%">
+    </div>
+</ion-content>
+
+<ion-content *ngIf="!hasErr">
+    <div *ngIf="!dataFinish" class="loading">
+        <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+
+    <ion-refresher (ionRefresh)="getData($event)">
+        <ion-refresher-content pullingText="刷新中..."></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-grid>
+        <ion-row wrap>
+            <ion-col *ngFor="let movie of movieList" width-50>
+                <ion-card (click)="pushDetail(movie.id)">
+                    <img [src]="movie.images.large" />
+                    <ion-card-content>
+                        <ion-card-title>{{movie.title}}</ion-card-title>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-infinite-scroll *ngIf="hasmore" (ionInfinite)="getData($event)">
+        <ion-infinite-scroll-content loadingText="加载中..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

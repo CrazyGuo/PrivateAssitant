@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <button class="btnInput" icon-left>
+      <input type="text" placeholder="你的每一次努力,未来都能看得见" [(ngModel)]="englishWord"/>
+    </button>
+
+    <button class="btnSearch" color="secondary" (click)="search()">
+      <ion-icon name="search"></ion-icon>
+      搜索
+    </button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <audio-track #audio *ngFor="let item of groupEnglish" [track]="item" (onFinish)="onTrackFinished($event)">
+        <ion-item>
+            <ion-item class="rectangle" (click)="toggleGroup(item.item,audio.id)">
+              <i class="ion-icon" >
+                {{item.item.Word}}
+              </i>
+              <i style="color:green;font-size:14px"> {{item.item.Accent}}</i>
+              <ion-icon name="checkmark" *ngIf="item.item.IsAddedToMe"></ion-icon>
+              <i style="font-size:10px">词频</i>
+              <i style="color:red;font-size:10px"> {{item.item.Index}}</i>
+              <i style="font-size:10px">{{item.item.Source}}</i>
+            </ion-item >
+          <div *ngIf="isGroupShown(item.item)">
+            <ion-item text-wrap class="rectangle" *ngFor="let it of item.item.Items" >
+              <div [innerHTML]="it.Sentence">
+              </div>
+            </ion-item>
+          </div>
+        </ion-item>
+    </audio-track>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" mini><ion-icon name="ios-send"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="joinInMyDiction()" color="secondary">收录</button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

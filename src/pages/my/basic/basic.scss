@@ -1,0 +1,66 @@
+page-basic
+{
+      .head
+      {
+            background:url(../assets/image/bg.jpg) no-repeat;
+            background-size:100%;
+            background-repeat:round;
+            padding:15px 0;
+            overflow:hidden;
+
+            .img
+            {
+                width:25%;
+                display: block;
+                margin: 0 auto;
+
+                img
+                {
+                    border-radius: 50px;
+                    width:100%;
+                }
+            }
+
+            .sign
+            {
+                text-align: center;
+                h2
+                {
+                    font-size:16px;
+                    color:#fff;
+                    padding-top:15px;
+                    border-bottom:5px;
+                }
+            }
+      }
+                  ion-row
+                  {
+                       border-bottom:1px solid #EAEAEA;
+                       padding:0;
+                       background-color:#fff;
+                       margin: 0;
+
+                       ion-col
+                       {
+                          text-align: center;
+                          padding: 3% 0;
+                          border-right:1px solid #EAEAEA;
+                          a
+                          {
+                             img
+                             {
+                                  width:50%;
+                                  padding-bottom: 3px;
+                             }
+
+                          }
+                       }
+
+                  }
+      .logOut
+      {
+            width:90%;
+            padding-left: 5%;
+            padding-top: 30px;
+      }
+}

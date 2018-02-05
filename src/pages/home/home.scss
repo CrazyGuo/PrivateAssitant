@@ -1,0 +1,31 @@
+page-home
+{
+    ion-grid
+    {
+        ion-col
+        {
+            padding: 0 !important;
+            border-right: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
+            ion-card
+            {
+                    margin: 3px !important;
+                    width: calc(100% - 6px)  !important;
+                    text-align: center;
+                    ion-card-content
+                    {
+                        font-size: 14px !important;
+                    }
+            }
+        };
+        ion-col:first-child
+        {
+                border-left: 1px solid #EAEAEA;
+        }
+        ion-row:first-child
+        {
+                border-top: 1px solid #EAEAEA;
+        }
+    }
+
+}

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="loginForm" >
+      <div padding [@flyInBottomFast]="cloudState" id="cloud-layer">
+
+        <ion-row>
+          <ion-col>
+            <img [@flyInBottomSlow]="logoState" src="assets/image/fixed/logo.png" />
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-list inset [@bounceInBottom]="formState">
+
+              <ion-item>
+                <ion-label>Username</ion-label>
+                <ion-input placeholder="Text Input" type="text" formControlName="LoginID"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password" formControlName="LoginPwd"></ion-input>
+              </ion-item>
+
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button class="login-button" [@fadeIn]="loginState" (click)="login(loginForm.value, $event)">Login</button>
+          </ion-col>
+        </ion-row>
+
+      </div>
+  </form>
+</ion-content>
+

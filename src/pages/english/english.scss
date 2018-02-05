@@ -1,0 +1,119 @@
+page-english
+{
+    //头部
+    .toolbar-background
+    {
+        //background: #dddddd;
+    }
+    ion-header ion-toolbar
+    {
+      .btnInput
+      {
+            position: relative;
+            border-radius: 5px;
+            width: 70%;
+            height: 45px;
+            bottom: 1px;
+            left: 5%;
+            color: #dadada;
+            background-color: #333333;
+            input
+            {
+                width: 90%;
+                border: none;
+                height: 100%;
+                text-align:center;
+                background-color: #333333;
+            }
+      }
+      .btnSearch
+      {
+            position: relative;
+            left: 5%;
+            width: 20%;
+            border-radius: 5px;
+            height: 43px;
+            bottom: 0px;
+            background-color: #CCFFCC;
+            font-weight: bold;
+      }
+    }
+    .ion-icon
+    {
+                color: #1683be;
+                font-weight: bold;
+    }
+    .rectangle
+    {
+          border:2px solid #EAEAEA;
+          border-radius: 0px;
+    }
+
+    .hom
+    {
+        display: block;
+        margin-left: 0em;
+        margin-bottom: 1em;
+    }
+    span
+    {
+        .sensenum
+        {
+            margin-left: -1.3em;
+            float: left;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+
+    .sense
+    {
+        margin-left: 0;
+        margin-bottom: .5em;
+        margin-top: .5em;
+    }
+
+    .def
+    {
+        font-size: 1.25em;
+        margin-bottom: .5em;
+        line-height: 1.5em;
+    }
+    .hi
+    {
+          font-weight: bold;
+          color: #1683be;
+    }
+    .rend-b
+    {
+          font-weight: bold;
+          color: #1683be;
+    }
+
+    a
+    {
+        cursor: pointer;
+        color: inherit;
+        text-decoration: none;
+        border-bottom: dashed 1px rgba(0,0,0,.6);
+    }
+
+    .quote
+    {
+        color: #EAC100;
+    }
+
+    .quote:before
+    {
+        content: '·';
+        margin-right: .5em;
+        font-weight: bold;
+    }
+
+    .thes
+    {
+        margin-top: .8em;
+        line-height: 2em;
+        color: #FF0000;
+    }
+}

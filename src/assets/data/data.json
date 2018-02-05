@@ -1,0 +1,59 @@
+{
+    "results": [
+       {
+            "id": "1",
+            "name": "艺术欣赏",
+            "icon": "assets/image/grid/1.jpg",
+            "pageName": "ArtPage"
+        },
+        {
+            "id": "2",
+            "name": "知乎日报",
+            "icon": "assets/image/grid/2.jpg",
+            "pageName": "ZhihuCategoryPage"
+        },
+        {
+            "id": "3",
+            "name": "电影快讯",
+            "icon": "assets/image/grid/3.jpg",
+            "pageName": "MovieListPage"
+        },
+        {
+            "id": "4",
+            "name": "文字提取",
+            "icon": "assets/image/grid/4.jpg",
+            "pageName": "OcradPage"
+        },
+        {
+            "id": "5",
+            "name": "英语修养",
+            "icon": "assets/image/grid/5.jpg",
+            "pageName": "ModuleListPage"
+
+        },
+        {
+            "id": "6",
+            "name": "个人计划",
+            "icon": "assets/image/grid/6.jpg",
+            "pageName": "TodoPage"
+        },
+        {
+            "id": "7",
+            "name": "吃喝玩乐",
+            "icon": "assets/image/grid/7.jpg",
+	          "pageName": "WordPieChartPage"
+        },
+        {
+            "id": "8",
+            "name": "阅读人生",
+            "icon": "assets/image/grid/10.jpg"
+
+        },
+        {
+            "id": "9",
+            "name": "投资理财",
+            "icon": "assets/image/grid/9.jpg"
+
+        }
+    ]
+}

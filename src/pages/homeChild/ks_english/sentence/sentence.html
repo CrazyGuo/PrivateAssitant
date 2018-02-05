@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>英语句子</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!dataFinish" class="loading">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+    <div *ngIf="dataFinish">
+      <ion-list>
+        <ion-card *ngFor="let item of englishSentence">
+          <ion-item text-wrap class="englishSentence">
+            <p> {{item.CreatedDate | date:"yyyy-MM-dd HH:mm"}} </p>
+            <h2>{{item.Sentence}}</h2>
+            <p>{{item.Chinese}}</p>
+          </ion-item>
+        </ion-card>
+
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="getMoreSentenceList($event)" *ngIf="!isLastPage">
+        <ion-infinite-scroll-content loadingText="加载中..."></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </div>
+</ion-content>
+

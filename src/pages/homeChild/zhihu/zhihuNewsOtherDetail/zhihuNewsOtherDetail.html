@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{selectedItem.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="selectedItem" class="noPadding">
+    <img src="{{selectedItem.background}}" alt="" class="top-pic">
+
+    <ion-list>
+      <ion-card *ngFor="let story of selectedItem.stories">
+        <ion-item text-wrap (click)="storyShow( story.id)">
+          <ion-thumbnail item-right>
+            <img [src]="story.images">
+          </ion-thumbnail>
+          <h2>{{story.title}}</h2>
+        </ion-item>
+      </ion-card>
+
+    </ion-list>
+
+  </div>
+</ion-content>

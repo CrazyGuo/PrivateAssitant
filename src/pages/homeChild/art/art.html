@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      妹子图
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- 刷新页面 -->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="正在刷新数据......">
+    </ion-refresher-content>
+  </ion-refresher>
+  <!-- 卡片 -->
+  <ion-card *ngFor='let tt of ts'>
+    <ion-card-content>
+      <a href="{{tt.url}}"><img src="{{tt.url}}"></a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

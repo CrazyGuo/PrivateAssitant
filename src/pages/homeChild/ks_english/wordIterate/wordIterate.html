@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>单词列表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <div *ngIf="!dataFinish" class="loading">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+    <div *ngIf="dataFinish">
+        <audio-track #audio *ngFor="let item of groupEnglish" [track]="item" (onFinish)="onTrackFinished($event)" >
+            <ion-item class="rectangleItem">
+                <ion-item class="rectangle" (click)="toggleGroup(item.item,audio.id)">
+                  <i class="ion-icon" >
+                    {{item.item.Word}}
+                  </i>
+                  <i style="color:green;font-size:14px"> {{item.item.Accent}}</i>
+                  <i style="font-size:10px">词频</i>
+                  <i style="color:red;font-size:10px"> {{item.item.Index}}</i>
+                  <i style="font-size:10px">{{item.item.Source}}</i>
+                </ion-item >
+            </ion-item>
+        </audio-track>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="getMoreList($event)" *ngIf="isLastPage">
+      <ion-infinite-scroll-content loadingText="加载中..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" mini><ion-icon name="ios-send"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="setRange()" color="secondary">范围</button>
+      <button ion-fab (click)="setLevel()" color="secondary">等级</button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
