@@ -11,6 +11,8 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { BasicPage } from '../pages/my/basic/basic';
+import { CategoryPage } from '../pages/category/category';
+
 import { LoginPage } from '../pages/my/login/login';
 import { ZhihuNewsListPage } from '../pages/homeChild/zhihu/zhihuNewsList/zhihuNewsList';
 import { ZhihuNewsDetailPage } from '../pages/homeChild/zhihu/zhihuNewsDetail/zhihuNewsDetail';
@@ -40,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                         BasicPage,
                         HomePage,
                         TabsPage,
+			CategoryPage,
                         LoginPage,
                         ZhihuNewsListPage,
                         ZhihuNewsDetailPage,
@@ -72,6 +75,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                         BasicPage,
                         HomePage,
                         TabsPage,
+			CategoryPage,
                         LoginPage,
                         ZhihuNewsListPage,
                         ZhihuNewsDetailPage,

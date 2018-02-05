@@ -13,6 +13,8 @@ export class AppURLs
     public AppUpgradeUrl = this.AppBaseUrl + "dormitory/CheckAppVersion?appKind=1";
     public LoginUrl = this.AppBaseUrl + "UserLoginAndRegister/Login";
     public HomeConfigUrl = "assets/data/data.json";
+    public CategoryConfigUrl = "assets/data/category.json";
+    public CategoryDetailConfigUrl = "assets/data/category_detail.json";
 
     //English Part URL
     public EnglishConfigUrl = "assets/data/english_module.json";

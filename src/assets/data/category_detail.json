@@ -1,0 +1,65 @@
+{
+    "category_detail":
+      [
+        {
+          "name": "毛呢大衣",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10001"
+        },
+        {
+          "name": "羽绒服",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10002"
+        },
+        {
+          "name": "针织衫",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10003"
+        },
+        {
+          "name": "连衣裙",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10004"
+        },
+        {
+          "name": "棉服",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10005"
+        },
+        {
+          "name": "长袖T恤",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10006"
+        },
+        {
+          "name": "羊绒衫",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10007"
+        },
+        {
+          "name": "衬衫",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10008"
+        },
+        {
+          "name": "风衣",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10009"
+        },
+        {
+          "name": "皮衣",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10010"
+        },
+        {
+          "name": "休闲裤",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10011"
+        },
+        {
+          "name": "牛仔裤",
+          "src": "assets/image/qrcode.jpg",
+          "typeNumber": "10012"
+        }
+      ]
+}

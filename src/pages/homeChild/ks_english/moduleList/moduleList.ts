@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
-import { CommonService } from '../../providers/baseService/CommonService';
-import { AppURLs } from '../../providers/baseService/AppURLs';
+import { CommonService } from '../../../../providers/baseService/CommonService';
+import { AppURLs } from '../../../../providers/baseService/AppURLs';
 
 @IonicPage()
 @Component(
