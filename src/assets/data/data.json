@@ -29,7 +29,6 @@
             "name": "英语修养",
             "icon": "assets/image/grid/5.jpg",
             "pageName": "ModuleListPage"
-
         },
         {
             "id": "6",
@@ -46,8 +45,8 @@
         {
             "id": "8",
             "name": "阅读人生",
-            "icon": "assets/image/grid/10.jpg"
-
+            "icon": "assets/image/grid/10.jpg",
+            "pageName": "OdooLoginPage"
         },
         {
             "id": "9",

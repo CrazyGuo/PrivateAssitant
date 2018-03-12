@@ -26,6 +26,8 @@ import { IonicAudioModule,defaultAudioProviderFactory } from 'ionic-audio';
 //basic service
 import {CommonService} from "../providers/baseService/CommonService";
 import { AppURLs } from "../providers/baseService/AppURLs";
+import { Utils } from "../providers/baseService/Utils";
+import { OdooJsonRpc } from "../providers/baseService/Odoojsonrpc";
 //business Service
 import { TodoService } from "../providers/businessService/TodoService";
 
@@ -42,7 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                         BasicPage,
                         HomePage,
                         TabsPage,
-			CategoryPage,
+			                  CategoryPage,
                         LoginPage,
                         ZhihuNewsListPage,
                         ZhihuNewsDetailPage,
@@ -75,7 +77,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                         BasicPage,
                         HomePage,
                         TabsPage,
-			CategoryPage,
+			                  CategoryPage,
                         LoginPage,
                         ZhihuNewsListPage,
                         ZhihuNewsDetailPage,
@@ -91,6 +93,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
                         },
                         CommonService,
                         AppURLs,
+                        Utils,
+                        OdooJsonRpc,
                         TodoService,
                         StatusBar,
                         SplashScreen,
