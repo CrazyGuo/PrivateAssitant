@@ -84,11 +84,9 @@ export class OdooLoginPage
               let logiData: any = JSON.parse(res._body)["result"];
               logiData.password = this.password
               localStorage.setItem("token", JSON.stringify(logiData));
-              this.utils.presentAlert("Congratulation", "You login success",
-                            [{
-                              text: "Ok"
-                            }])
-              //this.navCtrl.setRoot(HomePage);
+              //this.utils.dismissLoading()
+              this.utils.presentAlert("Congratulation", "You login success",[{text: "Ok"}])
+              this.TestMyOdooModel()
           }).
           catch((err) =>
           {
@@ -97,5 +95,40 @@ export class OdooLoginPage
                 text: "Ok"
               }])
           });
+    }
+
+
+    private lunchAlert = "lunch.alert";
+    private fields = ["message", "id"];
+    private domain = []
+    private sort = ""
+    private limit = 0
+    private offset = 0
+    private items: Array<{ id: number, message: string }> = []
+
+    private TestMyOdooModel()
+    {
+            this.odooRpc.searchRead(this.lunchAlert,this.domain, this.fields, this.limit, this.offset,this.sort)
+            .then((lunchAlerts: any) =>
+            {
+                let json = JSON.parse(lunchAlerts._body);
+                if (!json.error)
+                {
+                    let query = json["result"].records
+                    for (let i in query)
+                    {
+                        this.items.push
+                        ({
+                            id: query[i].id,
+                            message: query[i].message
+                        })
+                    }
+                    this.utils.presentAlert("Lunch Message", this.items[0].message,[{text: "Ok"}])
+                }
+                else
+                {
+                    this.utils.presentAlert("LunchAlert", "Parse lunch alert error",[{text: "Ok"}])
+                }
+            })
     }
 }
